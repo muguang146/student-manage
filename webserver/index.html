@@ -13,7 +13,7 @@
 
   <header class="lv-header">
     <div class="lv-header-left">
-      <a href="/" class="logo"><h1>骚猪 - 我的天，你真帅</h1></a>
+      <a href="/" class="logo"><h1>暮光 - 我的天，你真帅</h1></a>
     </div>
     <div class="lv-header-right">
       <div class="btn"><i class="iconfont icon-setting"></i></div>
@@ -74,5 +74,9 @@
   </div>
 
   <script src="./js/less.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+     $(".nickname").html(document.cookie.split("=")[1]);
+  </script>
 </body>
 </html>
