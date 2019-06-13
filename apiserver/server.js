@@ -3,6 +3,7 @@ const app = express();
 
 // 引入路由
 const userRoutes = require("./routes/user");
+const studentRoutes = require("./routes/student");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended : true }));
@@ -14,7 +15,8 @@ app.use((req, res, next) => {
    next();
 });
 
-app.use(userRoutes);
+app.use("/api/user",userRoutes);
+app.use("/api/student", studentRoutes);
 
 
 app.listen(3000);

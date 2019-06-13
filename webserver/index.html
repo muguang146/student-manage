@@ -8,6 +8,7 @@
   <link rel="stylesheet/less" href="./css/reset.less">
   <link rel="stylesheet/less" href="./css/common.less">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1110021_bv6rtxt80dt.css">
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -56,10 +57,28 @@
           </div>
         </div>
       </div>
-
+      <!-- 学生表格 -->
+      <table class="table">
+        <thead>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>班级</th>
+          <th>操作</th>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>18</td>
+            <td>sz-1904</td>
+            <td><button class="btn btn-danger">删除</button></td>
+          </tr>
+        </tbody>
+      </table>
       <!-- 分页 -->
       <div class="lv-pagination right">
-        <ul>
+        <ul id="studentNum">
           <li class="lv-pagination__item prev"><a href="#"><i class="iconfont icon-doubleleft"></i></a></li>
           <li class="lv-pagination__item active"><a href="#">1</a></li>
           <li class="lv-pagination__item"><a href="#">2</a></li>
@@ -75,8 +94,13 @@
 
   <script src="./js/less.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./js/student.js"></script>
   <script>
      $(".nickname").html(document.cookie.split("=")[1]);
+     $(".user").click(() => {
+       location.href = "./login.html"
+     });
   </script>
 </body>
 </html>

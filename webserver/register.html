@@ -50,7 +50,7 @@
           username : $("input[name=username]").val(),
           password : $("input[name=password]").val()
         },
-        url : "http://127.0.0.1:3000/reg",
+        url : "http://127.0.0.1:3000/api/user/reg",
         success : (data) => {
           alert("登录成功");
           location.href = "./login.html";
